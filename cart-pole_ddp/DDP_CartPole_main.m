@@ -18,10 +18,10 @@ E.l      = 1;     % pole length
 E.g      = 9.8;   % gravity
 
 % Final Time
-Tf = 5;
+Tf = 10;
 
 % Discretization
-dt = 0.01;
+dt = 0.1;
 
 % Horizon 
 horizon = Tf/dt;                  % 1.5sec

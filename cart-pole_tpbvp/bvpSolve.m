@@ -2,10 +2,13 @@
 % Define function to solve problem
 function answer = bvpSolve(a,b,c,d,e,f,g)
 global A B x0 Q R S
+global tf dt
+
 % tf=10; x0 = [5, 2]';
 Q = a; R = b; S = c;
 A = d; B = e; x0 = f; tf = g;
-tf = 10; dt = 0.1; time = [0:dt:tf];
+% tf = 10; dt = 0.1; 
+time = [0:dt:tf];
 solinit = bvpinit(linspace(0,tf), @bvpInit);
 sol = bvp4c(@bvpODE, @bvpBC, solinit);
 time = sol.x;

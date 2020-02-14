@@ -5,9 +5,10 @@ set(0, 'DefaultTextFontSize', 14, 'DefaultTextFontWeight','demi')
 
 % Setting up problem and calling function
 % global A B
+global tf dt
 A = [0 1; 0 0]; B = [0, 1]'; Q = [1, 0; 0, 1]; R = 1; S = [2,0; 0, 1];
 tf = 10; dt = 0.1; time = [0:dt:tf];
-x0 = [5, 2]';
+x0 = [-3, 0]';
 result = bvpSolve(Q,R,S,A,B,x0,tf); % Solving via bvp4c
 
 %%
